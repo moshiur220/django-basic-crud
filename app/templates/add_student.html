@@ -1,0 +1,21 @@
+<!-- add_student.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+</head>
+<body>
+    <h1>Add Student</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="stname">Name:</label>
+        <input type="text" id="stname" name="stname" required><br>
+        <label for="stemail">Email:</label>
+        <input type="email" id="stemail" name="stemail" required><br>
+        <label for="stdep">Department:</label>
+        <input type="text" id="stdep" name="stdep" required><br>
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>

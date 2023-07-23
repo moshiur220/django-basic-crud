@@ -1,0 +1,21 @@
+<!-- update_student.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student</title>
+</head>
+<body>
+    <h1>Update Student</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="stname">Name:</label>
+        <input type="text" id="stname" name="stname" value="{{ student.stname }}" required><br>
+        <label for="stemail">Email:</label>
+        <input type="email" id="stemail" name="stemail" value="{{ student.stemail }}" required><br>
+        <label for="stdep">Department:</label>
+        <input type="text" id="stdep" name="stdep" value="{{ student.stdep }}" required><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
